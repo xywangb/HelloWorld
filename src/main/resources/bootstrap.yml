@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    config:
+      uri: http://msf-config-service:8183/msf-config-service
+      fail-fast: true
+      name: msf-demo  
+      profile: "profile"   
+      label: master
+      retry:
+        initial-interval: 2000
+        max-interval: 10000
+        multiplier: 2
+        max-attempts: 10

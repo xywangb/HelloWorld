@@ -1,0 +1,27 @@
+##超时配置
+#hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 6000
+
+##连接注册中心Eureka配置，需修改eureka url对应的域名，从微服务平台获取
+#eureka:
+#  instance:
+#    preferIpAddress: true
+#    metadata-map:
+#      zone: zone1    #本地调试指定自己的zone
+#  client:
+#    registerWithEureka: true
+#    fetchRegistry: true
+#    serviceUrl:
+#      defaultZone: http://msf-registry-serviceqasdistrict.cqas.whchem.com:80/msf-registry-service/eureka/
+
+##本地应用配置，application.name和context-path都需修改为自己的微服务名称
+#spring:
+#  application:
+#    name: msf-demo1
+#server:
+#  context-path: /msf-demo1
+#  port: 8081
+
+##本地联调配置，msf-demo2为本地服务\msf-demo3为服务端的服务，msf-zuul-serviceqasdistrict.cqas.whchem.com为微服务网关的域名，从微服务平台获取
+#ribbon.eureka.enabled: false
+#msf-demo2.ribbon.listOfServers: localhost:8082
+#msf-demo3.ribbon.listOfServers: msf-zuul-serviceqasdistrict.cqas.whchem.com
