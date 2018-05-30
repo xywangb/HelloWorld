@@ -16,7 +16,7 @@ import org.slf4j.LoggerFactory;
 public class MsfdemoController {
     
     private Logger logger = LoggerFactory.getLogger(MsfdemoController.class);
-
+// *************************
     @ApiOperation(value = "测试接口1", notes = "swagger样例1")
     @GetMapping("/")
     public String printServiceA() {
